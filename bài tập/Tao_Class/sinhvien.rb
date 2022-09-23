@@ -1,8 +1,11 @@
 class Sinhvien
-
-  def initialize(name, id)
+  attr_accessor :name,:id,:toan,:li,:hoa
+  def initialize(name, id,toan,li,hoa)
     @name=name
     @id=id
+    @toan=toan
+    @li=li
+    @hoa=hoa
   end
   def name
     @name
@@ -39,7 +42,7 @@ class Sinhvien
     puts("average=#{avr}")
   end
 end
-sv=Sinhvien.new('tan',1)
+sv=Sinhvien.new('tan',1,0,0,0)
 puts("chao #{sv.name}")
 puts("nhap diem toan")
 sv.toan
